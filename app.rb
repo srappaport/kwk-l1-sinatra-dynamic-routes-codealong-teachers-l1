@@ -27,6 +27,10 @@ class App < Sinatra::Base
     erb :'/medicines/show.html'
   end
 
+  get "/goodbye/:name" do
+    @user_name = params[:name]
+    "Goodbye #{@user_name}!"
+  end
 
 
 end
